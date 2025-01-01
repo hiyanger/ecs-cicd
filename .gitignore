@@ -1,0 +1,10 @@
+.terraform/providers/registry.terraform.io/hashicorp/aws/5.82.2/darwin_amd64/LICENSE.txt
+.terraform/providers/registry.terraform.io/hashicorp/aws/5.82.2/darwin_amd64/terraform-provider-aws_v5.82.2_x5
+.terraform/providers/registry.terraform.io/hashicorp/http/3.4.5/darwin_amd64/LICENSE.txt
+.terraform/providers/registry.terraform.io/hashicorp/http/3.4.5/darwin_amd64/terraform-provider-http_v3.4.5_x5
+.terraform/providers/registry.terraform.io/hashicorp/tls/4.0.6/darwin_amd64/LICENSE.txt
+.terraform/providers/registry.terraform.io/hashicorp/tls/4.0.6/darwin_amd64/terraform-provider-tls_v4.0.6_x5
+terraform.tfstate
+terraform.tfvars
+.terraform.lock.hcl
+terraform.tfstate.backup

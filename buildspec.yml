@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - apt-get update && apt-get install -y mysql-client awscli
+
+  pre_build:
+    commands:
+      - aws s3 cp s3://ecs-cicd-migration-bucket-20241231/migration.sql ./migration.sql
+
+  build:
+    commands:
+      - mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < migration.sql
+      - rm -f migration.sql
+
+  post_build:
+    commands:
+      - aws s3 cp s3://ecs-cicd-appspec-task-bucket-20241231/appspec.yml ./appspec.yml
+     #- aws s3 cp s3://ecs-cicd-appspec-task-bucket-20241231/task_def.json ./task_def.json
+
+artifacts:
+    files:
+        - '**/*'
